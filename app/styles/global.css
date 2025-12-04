@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+                      linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #2563EB 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Modal Styles */
+#demoModal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#demoModal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+#demoModal:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
